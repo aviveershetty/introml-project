@@ -5,7 +5,7 @@ from loss import dummy_loss,StyleReconstructionRegularizer,FeatureReconstruction
 from keras.optimizers import Adam, SGD,Nadam,Adadelta
 from keras.preprocessing.image import ImageDataGenerator
 from keras import backend as K
-from scipy.misc import imsave
+from scipy.misc import imsave, imshow
 import time
 import numpy as np 
 import argparse
@@ -84,7 +84,7 @@ def main(args):
 
     model.compile(Adam(),  dummy_loss)  # Dummy loss since we are learning from regularizes
 
-    model.load_weights("pretrained/"+style+'_weights.h5',by_name=False)
+    model.load_weights(style,by_name=False)
 
     
     t1 = time.time()
@@ -105,6 +105,7 @@ def main(args):
         y = original_colors(ox,y,original_color )
 
     imsave('%s_output.png' % output_file, y)
+    imshow(y)
         
  
 
@@ -113,9 +114,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Real-time style transfer')
 
     parser.add_argument('--style', '-s', type=str, required=True,
-                        help='style image file name without extension')
+                        help='style model file name without extension')
 
-    parser.add_argument('--input', '-i', default=None, required=True,type=str,
+    parser.add_argument('--input', '-i', type = str, required=True,
                         help='input file name')
 
     parser.add_argument('--output', '-o', default=None, required=True,type=str,
