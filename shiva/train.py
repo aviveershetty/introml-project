@@ -30,7 +30,7 @@ def display_img(i,x,style,is_val=False):
     print('Image saved as', fname)
 
 def get_style_img_path(style):
-    return "images/style/"+style+".jpg"
+    return "root/style/"+style+".jpg"
 
 
 def main(args):
@@ -47,10 +47,10 @@ def main(args):
     model.summary()
 
 
-    #nb_epoch = 82785 *2 
-    nb_epoch = 82
+    nb_epoch = 82785 *2 
     train_batchsize =  1
-    train_image_path = "images/train/"
+    train_image_path = "root/train/"
+    
 
     learning_rate = 1e-3 #1e-3
     optimizer = Adam() # Adam(lr=learning_rate,beta_1=0.99)
