@@ -30,7 +30,7 @@ def display_img(i,x,style,is_val=False):
     print('Image saved as', fname)
 
 def get_style_img_path(style):
-    return "../../../../data/style/"+style+".jpg"
+    return "images/style/"+style+".jpg"
     
 
 
@@ -48,10 +48,10 @@ def main(args):
     model.summary()
 
 
-    #nb_epoch = 82785 *2 
-    nb_epoch = 1000
+    nb_epoch = 82785  
+    #nb_epoch = 1000
     train_batchsize =  1
-    train_image_path = "../../../../data/train/"
+    train_image_path = "images/train/"
     
 
     learning_rate = 1e-3 #1e-3
