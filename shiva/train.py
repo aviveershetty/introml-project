@@ -48,8 +48,8 @@ def main(args):
     model.summary()
 
 
-    nb_epoch = 82785  
-    #nb_epoch = 1000
+    #nb_epoch = 82785  
+    nb_epoch = 24535
     train_batchsize =  1
     train_image_path = "images/train/"
     
