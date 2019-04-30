@@ -22,14 +22,7 @@ import nets
 
 count = 1
 
-cap = cv2.VideoCapture('Sample_short.mp4')
 
-frame_width = int( cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-print("frame_width = ", frame_width)
-frame_height =int( cap.get( cv2.CAP_PROP_FRAME_HEIGHT))
-print("frame_height = ", frame_height)
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (frame_width,frame_height))
 #out1 = cv2.VideoWriter('output_in.avi',fourcc, 20.0, (frame_width,frame_height))
 
 # from 6o6o's fork. https://github.com/6o6o/chainer-fast-neuralstyle/blob/master/generate.py
@@ -128,6 +121,14 @@ def main(args):
     blend_alpha = args.blend
     media_filter = args.media_filter
 
+
+    cap = cv2.VideoCapture(input_file)
+    frame_width = int( cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    print("frame_width = ", frame_width)
+    frame_height =int( cap.get( cv2.CAP_PROP_FRAME_HEIGHT))
+    print("frame_height = ", frame_height)
+    fourcc = cv2.VideoWriter_fourcc(*'XVID')
+    out = cv2.VideoWriter('output.avi',fourcc, 20.0, (frame_width,frame_height))
     
     while(cap.isOpened()):
         # Capture frame-by-frame
@@ -137,7 +138,7 @@ def main(args):
         #cv2.imshow('frame1',frame)
         #cv2_show(frame)
         # Our operations on the frame come here
-        out1.write(frame)
+        #out1.write(frame)
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Display the resulting frame
