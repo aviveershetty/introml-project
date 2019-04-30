@@ -22,8 +22,15 @@ import nets
 
 count = 1
 
+cap = cv2.VideoCapture('Sample_short.mp4')
+
+frame_width = int( cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+print("frame_width = ", frame_width)
+frame_height =int( cap.get( cv2.CAP_PROP_FRAME_HEIGHT))
+print("frame_height = ", frame_height)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output2.avi',fourcc, 20.0, (640,480))
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (frame_width,frame_height))
+#out1 = cv2.VideoWriter('output_in.avi',fourcc, 20.0, (frame_width,frame_height))
 
 # from 6o6o's fork. https://github.com/6o6o/chainer-fast-neuralstyle/blob/master/generate.py
 def original_colors(original, stylized,original_color):
@@ -75,6 +82,7 @@ class video_predictor:
     def __init__(self, image, media_filter, blend_alpha, original_color, style, output_file):
         aspect_ratio, x = preprocess_reflect_video(image, size_multiple=4)
         img_width= img_height = x.shape[1]
+        print("img_width = ", img_width)
         self.net = nets.image_transform_net(img_width,img_height)
         self.model = nets.loss_net(self.net.output,self.net.input,img_width,img_height,"",0,0)
 
@@ -120,8 +128,8 @@ def main(args):
     blend_alpha = args.blend
     media_filter = args.media_filter
 
-    cap = cv2.VideoCapture(input_file)
-    while(True):
+    
+    while(cap.isOpened()):
         # Capture frame-by-frame
         ret, frame = cap.read()
         if ret == 1:
@@ -129,6 +137,7 @@ def main(args):
         #cv2.imshow('frame1',frame)
         #cv2_show(frame)
         # Our operations on the frame come here
+        out1.write(frame)
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Display the resulting frame
@@ -147,10 +156,6 @@ def main(args):
         out.write(new_image)
         #cv2.imshow('frame',new_image)
         cv2.waitKey(5)
-
-
-
-
 
 
 
