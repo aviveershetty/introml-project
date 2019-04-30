@@ -126,7 +126,8 @@ def main(args):
         ret, frame = cap.read()
         if ret == 1:
             print("image read successful")
-        cv2_imshow('frame1',frame)
+        #cv2.imshow('frame1',frame)
+        cv2_show(frame)
         # Our operations on the frame come here
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
@@ -144,7 +145,7 @@ def main(args):
 
         new_image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         out.write(new_image)
-        cv2_imshow('frame',new_image)
+        #cv2.imshow('frame',new_image)
         cv2.waitKey(5)
 
 
