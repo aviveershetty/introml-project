@@ -12,7 +12,7 @@ import argparse
 import h5py
 import tensorflow as tf
 import cv2
-from google.colab.patches import cv2_imshow
+#from google.colab.patches import cv2_imshow
 from skimage import color, exposure, transform
 from scipy import ndimage
 from scipy.ndimage.filters import median_filter
@@ -127,7 +127,7 @@ def main(args):
         if ret == 1:
             print("image read successful")
         #cv2.imshow('frame1',frame)
-        cv2_show(frame)
+        #cv2_show(frame)
         # Our operations on the frame come here
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
