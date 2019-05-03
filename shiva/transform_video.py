@@ -128,7 +128,7 @@ def main(args):
     frame_height =int( cap.get( cv2.CAP_PROP_FRAME_HEIGHT))
     print("frame_height = ", frame_height)
     fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    out = cv2.VideoWriter('output.avi',fourcc, 20.0, (frame_width,frame_height))
+    out = cv2.VideoWriter(input_file + '_output',fourcc, 20.0, (frame_width,frame_height))
     
     while(cap.isOpened()):
         # Capture frame-by-frame
