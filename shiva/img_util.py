@@ -158,6 +158,36 @@ def preprocess_reflect_video(img, size_multiple=4):
     img = np.expand_dims(img, axis=0)
     return (aspect_ratio  ,img)
 
+def preprocess_reflect_layer2(img, size_multiple=4):
+    #img = imread(image_path, mode="RGB")  # Prevents crashes due to PNG images (ARGB)
+    org_w = img.shape[0]
+    org_h = img.shape[1]
+
+    aspect_ratio = org_h/org_w
+    
+    sw = (org_w // size_multiple) * size_multiple # Make sure width is a multiple of 4
+    sh = (org_h // size_multiple) * size_multiple # Make sure width is a multiple of 4
+
+
+    size  = sw if sw > sh else sh
+
+    pad_w = (size - sw) // 2
+    pad_h = (size - sh) // 2
+
+    tf_session = K.get_session()
+    kvar = K.variable(value=img)
+
+    paddings = [[pad_w,pad_w],[pad_h,pad_h],[0,0]]
+    squared_img = tf.pad(kvar,paddings, mode='REFLECT', name=None)
+    img = K.eval(squared_img)
+
+    
+    img = imresize(img, (size, size),interp='nearest')
+    img = img.astype(np.float32)
+
+    img = np.expand_dims(img, axis=0)
+    return (aspect_ratio  ,img)
+
 
 def crop_image(img, aspect_ratio):
     if aspect_ratio >1:
