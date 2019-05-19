@@ -49,9 +49,9 @@ def main(args):
 
 
     #nb_epoch = 82785  
-    nb_epoch = 24535
+    nb_epoch = 18288
     train_batchsize =  1
-    train_image_path = "images/train/"
+    train_image_path = "../../../dataset"
     
 
     learning_rate = 1e-3 #1e-3
