@@ -165,7 +165,7 @@ def main(args):
         out.write(new_image)
 
         # Display the resulting frame
-        cv2.imshow('transformed video',new_image)
+        #cv2.imshow('transformed video',new_image)
         cv2.waitKey(5)
 
 
