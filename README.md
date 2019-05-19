@@ -19,6 +19,7 @@ Rendering the semantic content of an image in different styles is a difficult im
       <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;" align="right">
     </a>
   </div>
+  </br>
 
 <h2>Results</h2>
 <h3>Image Style Transfer using VGG-16 and VGG-19</h3>
