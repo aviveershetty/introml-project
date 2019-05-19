@@ -6,8 +6,8 @@ Rendering the semantic content of an image in different styles is a difficult im
 <div class="row">
   <h3>Content Image + Style Image = Stylized Image</h3>
   <div class="column" style="float: left;width: 33.33%; padding: 5px;">
-    <a href="/images/content/tandon.jpg">
-      <img src="/images/content/tandon.jpg" style="max-width:100%;">
+    <a href="/images/content/tandon_image.jpg">
+      <img src="/images/content/tandon_image.jpg" style="max-width:100%;">
     </a>
   </div>
   <div class="column" style="float: left;width: 33.33%; padding: 5px;">
@@ -80,8 +80,21 @@ Rendering the semantic content of an image in different styles is a difficult im
    </div> 
   </div>
  </div>
- 
- <p>Video Style Transfer using VGG-19</p>
+
+<p>Video Style Transfer using VGG-19</p>
+<p>Content Video</p>
+ <div align="center">
+    <a href="https://www.youtube.com/watch?v=xVJwwWQlQ1o">
+       <img src="/results/Video_Transform/video_input_gif.gif" alt="Content Video" width="800px" height="400px" style="max-width:100%;">
+     </a>
+</div>
+<p>Stylized Video</p>
+<div align="center">
+    <a href="https://www.youtube.com/watch?v=xVJwwWQlQ1o">
+       <img src="/results/Video_Transform/video_output_gif.gif" alt="Content Video" width="800px" height="400px" style="max-width:100%;">
+     </a>
+</div>
+
  
   
   
