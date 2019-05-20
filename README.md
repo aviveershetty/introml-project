@@ -24,20 +24,20 @@ Rendering the semantic content of an image in different styles is a difficult im
    
    <div display="inline-block">
     <a href="/images/content/tandon_image.jpg">
-     <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;">
+     <img src="/images/content/tandon_image.jpg" height="246px" width="250px"">
     </a> 
     <a href="/images/style/wave_crop.jpg"> 
-      <img src="/images/style/la_muse.jpg" height="246px" style="max-width:100%;">
+      <img src="/images/style/la_muse.jpg" height="246px" width="250px"">
     </a>
    </div> 
 
  <p>VGG16 and VGG19 output images</p> 
    <div display="inline-block">
     <a href="/results/vgg16_image_transform/tandon_la_muse_output.png">
-     <img src="/results/vgg16_image_transform/tandon_la_muse_output.png" height="246px" style="max-width:100%;">
+     <img src="/results/vgg16_image_transform/tandon_la_muse_output.png" height="246px" width="250px"">
     </a>   
     <a href="/results/vgg19_image_transform/tandon_la_muse_output.jpg"> 
-      <img src="/results/vgg19_image_transform/tandon_la_muse_output.jpg" height="246px" style="max-width:100%;">
+      <img src="/results/vgg19_image_transform/tandon_la_muse_output.jpg" height="246px" width="250px"">
     </a>
    </div> 
 
@@ -82,6 +82,17 @@ Rendering the semantic content of an image in different styles is a difficult im
      </a>
 </div>
 
+<div>
+<h2>Implementation</h2>
+<p>We train with MS-COCO training set and prepare low-resolution inputs by blurring with a Gaussian kernel of width σ = 1.0 and down-sampling with bicubic interpolation. We resize each of the 80k training images to 256 × 256 and train with 2 epochs on the whole dataset. We use Adam with learning rate 1 × 10−3. The output images are regularized with total variation regularization with a strength of between 1 × 10−6 and 1×10−4, chosen via cross-validation per style target. For style transfer experiments, we compute feature reconstruction loss at layer ‘block3_conv3’ and style reconstruction loss at layers ‘block1_conv2’, ‘block2_conv2’, ‘block3_conv3’ and ‘block4_conv3’ of the VGG-16 loss network. For VGG-19, we compute feature reconstruction loss at layer ‘block4_conv2’ and style reconstruction loss at layers ‘block1_conv1’, ‘block2_conv1’, ‘block3_conv1’, ‘block4_conv1’ and ‘block5_conv1’ of the loss network. The code has been implemented in Keras using Tensorflow as the backend. Training takes roughly 4 hours on a single P40 GPU.</p>
+</div>
+
+<div>
+    <h2>Usage</h2>
+    <h3>Training models VGG-16 and VGG-19</h3>
+        <p>python3 train.py --style <path to style image> --output <output file name without extension> </p>
+        <p><b>Note:</b> Dataset should be kept in images/dataset location</p>
+            </div>
  
   
   
