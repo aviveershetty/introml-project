@@ -7,12 +7,12 @@ Rendering the semantic content of an image in different styles is a difficult im
   <div display="inline-block">
     <div>
       <a href="/images/content/tandon_image.jpg">
-        <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;">
+        <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;" align="left">
       </a>
     </div>
     <div>
       <a href="/images/style/wave_crop.jpg"> 
-        <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;">
+        <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;" align="middle">
       </a>
     </div>
     <div>
@@ -21,8 +21,6 @@ Rendering the semantic content of an image in different styles is a difficult im
       </a>
     </div>
   </div>
-  </br>
-  </br>
   </br>
 
 <h2>Results</h2>
