@@ -57,7 +57,7 @@ Rendering the semantic content of an image in different styles is a difficult im
     </a>
    </div>
  
- <p>Style Output and Texture + Style Output Image</p>
+ <p>Style Output without Textute and Style and Texture Output Image</p>
    <div display="inline-block">
     <a href="/images/generated/wave_crop_output.png"> 
       <img src="/images/generated/wave_crop_output.png" height="246px" width="250px"">
