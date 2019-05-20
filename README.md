@@ -43,7 +43,7 @@ Rendering the semantic content of an image in different styles is a difficult im
 
  
 <h3>The outcome of texture and style addition on content image using VGG-16</h3>
-<h3>Content Image + Style Image + Texture Image = Texture Style Output Image</h3>
+<h4>Content Image + Style Image + Texture Image = Texture Style Output Image</h4>
 <p>Content, Style and Texture Images</p>
    <div display="inline-block">
     <a href="/images/content/101.jpg">
@@ -88,11 +88,25 @@ Rendering the semantic content of an image in different styles is a difficult im
 </div>
 
 <div>
-    <h2>Usage</h2>
-    <h3>Training models VGG-16 and VGG-19</h3>
-        <p>python3 train.py --style <path to style image> --output <output file name without extension> </p>
-        <p><b>Note:</b> Dataset should be kept in images/dataset location</p>
-            </div>
+   <h2>Usage</h2>
+   <h3>1. Training models VGG-16 and VGG-19</h3>
+     <p>python3 train.py --style <path to style image> --output <output file name without extension> </p>
+     <p><b>Note:</b> Dataset should be kept in images/dataset location</br>
+      Uncomment line 17 and comment line 20 of train.py for training VGG-19.</p>
+        
+   <h3>2. Image Style transfer using VGG-16 and VGG-19 models</h3>   
+      <p>python3 transform.py --style <path to style model> --input <path to content image></p>
+      <p><b>Note:</b> Uncomment line 22 and comment line 25 of transform.py for VGG-19 model for Style transfer.</p>
+   <h3>3. Texture and style addition to content image</h3>
+      <p>python3 texture_trasform.py --texture <texture model file path> --style <style model file path> --input <input file path> --output <output filename with out extension></p>
+   <h3>4. Video Style Transfer using VGG-16 model</h3>
+      <p>python3 video_transform.py --input <path to input video> --style <style model path> --output <output filename without extension></p>
+ </div>
+
+<div>
+    <h2>Acknowledgement</h2>
+    <p>We would like to thank Prof. Sundeep Rangan for advising us for the project and providing Google Cloud Platform GPU credits. Also, we would like to thank Sam Lee and Logan Engstrom whose Style Transfer code open-sourced on GitHub has been used and modified in this project.</p>
+</div>
  
   
   
