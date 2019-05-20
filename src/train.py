@@ -51,10 +51,9 @@ def main(args):
     model.summary()
 
 
-    #nb_epoch = 82785  
-    nb_epoch = 18288
+    nb_epoch = 82785  
     train_batchsize =  1
-    train_image_path = "../../../../dataset"
+    train_image_path = "images/dataset"
     
 
     learning_rate = 1e-3 #1e-3
