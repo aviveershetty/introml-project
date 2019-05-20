@@ -1,22 +1,21 @@
-<!html>
 <h1>Fast Style Transfer using <a href="https://github.com/keras-team/keras">Keras</a></h1>
 <p>
 Rendering the semantic content of an image in different styles is a difficult image processing task. A task which a human would take days or months to complete is done within seconds using neural networks. We used pretrained models VGG-16 and VGG-19 using image and video as inputs to compare their quality of style transfer and performance. We also experimented by adding texture upon style on the content image.
 </p>
 
-  <h3>Content Image + Style Image = Stylized Image</h3>
-<div display="inline-block">
-    <div align="left">
+<h3>Content Image + Style Image = Stylized Image</h3>
+<div>
+    <div display="inline-block" align="left">
       <a href="/images/content/tandon_image.jpg">
         <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;">
       </a>
     </div>
-    <div align="middle">
+    <div display="inline-block" align="middle">
       <a href="/images/style/wave_crop.jpg"> 
         <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;">
       </a>
     </div>
-    <div align="right">
+    <div display="inline-block" align="right">
      `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
         <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;">
       </a>
