@@ -5,17 +5,17 @@ Rendering the semantic content of an image in different styles is a difficult im
 
 <h3>Content Image + Style Image = Stylized Image</h3>
 <div>
-    <div display="inline-block" align="left">
+    <div display="inline-block">
       <a href="/images/content/tandon_image.jpg">
         <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;">
       </a>
     </div>
-    <div display="inline-block" align="middle">
+    <div display="inline-block">
       <a href="/images/style/wave_crop.jpg"> 
         <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;">
       </a>
     </div>
-    <div display="inline-block" align="right">
+    <div display="inline-block">
      `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
         <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;">
       </a>
