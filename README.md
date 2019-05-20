@@ -43,25 +43,22 @@ Rendering the semantic content of an image in different styles is a difficult im
 
  
 <h3>The outcome of texture and style addition on content image using VGG-16</h3>
-
-   <div>
+<h3>Content Image + Style Image + Texture Image = Texture Style Output Image</h3>
+<p>Content, Style and Texture Images</p>
+   <div display="inline-block">
     <a href="/images/content/101.jpg">
      <img src="/images/content/101.jpg" height="246px" style="max-width:100%;">
-    </a>
-   </div>
-   <div>
+    </a>   
     <a href="/results/Texture_transform/wave_crop.jpg"> 
       <img src="/results/Texture_transform/wave_crop.jpg" height="246px" style="max-width:100%;">
     </a>
-   </div> 
-
-
-   <div>
     <a href="/results/Texture_transform/texture.jpg">
      <img src="/results/Texture_transform/texture.jpg" height="246px" style="max-width:100%;">
     </a>
    </div>
-   <div>
+ 
+ <p>Texture Style Output Image</p>
+   <div display="inline-block">
     <a href="/results/Texture_transform/texture_wavecrop_output.png"> 
       <img src="/results/Texture_transform/texture_wavecrop_output.png" height="246px" style="max-width:100%;">
     </a>
