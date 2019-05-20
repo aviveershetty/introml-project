@@ -90,17 +90,17 @@ Rendering the semantic content of an image in different styles is a difficult im
 <div>
    <h2>Usage</h2>
    <h3>1. Training models VGG-16 and VGG-19</h3>
-     <p>python3 train.py --style <<style image path>> --output <output file name without extension> </p>
+     <p>python3 train.py --style <style image path> --output <file name without extension> </p>
      <p><b>Note:</b> Dataset should be kept in images/dataset location.</br>
       Uncomment line 17 and comment line 20 of train.py for training VGG-19.</p>
         
    <h3>2. Image Style transfer using VGG-16 and VGG-19 models</h3>   
-      <p>python3 transform.py --style <path to style model> --input <path to content image></p>
-      <p><b>Note:</b> Uncomment line 22 and comment line 25 of transform.py for VGG-19 model for Style transfer.</p>
+      <p>python3 transform.py --style <style model path> --input <path to content image></p>
+    <p><b>Note:</b> Uncomment line 22 and comment line 25 of transform.py for VGG-19 model for Style transfer.</p>
    <h3>3. Texture and style addition to content image</h3>
-      <p>python3 texture_trasform.py --texture <texture model file path> --style <style model file path> --input <input file path> --output <output filename with out extension></p>
+      <p>python3 texture_trasform.py --texture <texture model file path> --style <style model file path> --input <file path> --output <output filename with out extension></p>
    <h3>4. Video Style Transfer using VGG-16 model</h3>
-      <p>python3 video_transform.py --input <path to input video> --style <style model path> --output <output filename without extension></p>
+      <p>python3 video_transform.py --input <path to input video> --style <style model path> --output <filename without extension></p>
           </div>
 
 <div>
