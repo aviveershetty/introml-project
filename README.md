@@ -17,7 +17,7 @@ Rendering the semantic content of an image in different styles is a difficult im
     </div>
     <div>
      `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
-        <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;">
+        <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;" align="right">
       </a>
     </div>
   </div>
