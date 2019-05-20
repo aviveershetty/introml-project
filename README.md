@@ -5,22 +5,24 @@ Rendering the semantic content of an image in different styles is a difficult im
 
   <h3>Content Image + Style Image = Stylized Image</h3>
   <div display="inline-block">
-  <div>
-    <a href="/images/content/tandon_image.jpg">
-      <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;" align="left">
-    </a>
+    <div>
+      <a href="/images/content/tandon_image.jpg">
+        <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;" align="left">
+      </a>
+    </div>
+    <div>
+      <a href="/images/style/wave_crop.jpg"> 
+        <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;" align="middle">
+      </a>
+    </div>
+    <div>
+     `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
+        <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;" align="right">
+      </a>
+    </div>
   </div>
-  <div>
-    <a href="/images/style/wave_crop.jpg"> 
-      <img src="/images/style/wave_crop.jpg" height="246px" style="max-width:100%;" align="middle">
-    </a>
-  </div>
-  <div>
-   `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
-      <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;" align="right">
-    </a>
-  </div>
-  </div>
+  </br>
+  </br>
   </br>
 
 <h2>Results</h2>
