@@ -4,6 +4,7 @@ Rendering the semantic content of an image in different styles is a difficult im
 </p>
 
   <h3>Content Image + Style Image = Stylized Image</h3>
+  <div display="inline-block">
   <div>
     <a href="/images/content/tandon_image.jpg">
       <img src="/images/content/tandon_image.jpg" height="246px" style="max-width:100%;" align="left">
@@ -18,6 +19,7 @@ Rendering the semantic content of an image in different styles is a difficult im
    `<a href="/results/vgg16_image_transform/tandon_wavercrop_output.png"> 
       <img src="/results/vgg16_image_transform/tandon_wavercrop_output.png" height="246px" style="max-width:100%;" align="right">
     </a>
+  </div>
   </div>
   </br>
 
