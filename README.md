@@ -47,20 +47,23 @@ Rendering the semantic content of an image in different styles is a difficult im
 <p>Content, Style and Texture Images</p>
    <div display="inline-block">
     <a href="/images/content/101.jpg">
-     <img src="/images/content/101.jpg" height="246px" style="max-width:100%;">
+     <img src="/images/content/101.jpg" height="246px" width="250px">
     </a>   
     <a href="/results/Texture_transform/wave_crop.jpg"> 
-      <img src="/results/Texture_transform/wave_crop.jpg" height="246px" style="max-width:100%;">
+      <img src="/results/Texture_transform/wave_crop.jpg" height="246px" width="250px">
     </a>
     <a href="/results/Texture_transform/texture.jpg">
-     <img src="/results/Texture_transform/texture.jpg" height="246px" style="max-width:100%;">
+     <img src="/results/Texture_transform/texture.jpg" height="246px" width="250px">
     </a>
    </div>
  
- <p>Texture Style Output Image</p>
+ <p>Style Output and Texture + Style Output Image</p>
    <div display="inline-block">
+    <a href="/images/generated/wave_crop_output.png"> 
+      <img src="/images/generated/wave_crop_output.png" height="246px" width="250px"">
+    </a>
     <a href="/results/Texture_transform/texture_wavecrop_output.png"> 
-      <img src="/results/Texture_transform/texture_wavecrop_output.png" height="246px" style="max-width:100%;">
+      <img src="/results/Texture_transform/texture_wavecrop_output.png" height="246px" width="250px"">
     </a>
    </div> 
  
