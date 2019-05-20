@@ -90,7 +90,7 @@ Rendering the semantic content of an image in different styles is a difficult im
 <div>
    <h2>Usage</h2>
    <h3>1. Training models VGG-16 and VGG-19</h3>
-     <p>python3 train.py --style <<path to style image>> --output <output file name without extension> </p>
+     <p>python3 train.py --style <<style image path>> --output <output file name without extension> </p>
      <p><b>Note:</b> Dataset should be kept in images/dataset location.</br>
       Uncomment line 17 and comment line 20 of train.py for training VGG-19.</p>
         
