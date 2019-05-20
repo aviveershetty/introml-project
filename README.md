@@ -90,8 +90,8 @@ Rendering the semantic content of an image in different styles is a difficult im
 <div>
    <h2>Usage</h2>
    <h3>1. Training models VGG-16 and VGG-19</h3>
-     <p>python3 train.py --style <path to style image> --output <output file name without extension> </p>
-     <p><b>Note:</b> Dataset should be kept in images/dataset location</br>
+     <p>python3 train.py --style <<path to style image>> --output <output file name without extension> </p>
+     <p><b>Note:</b> Dataset should be kept in images/dataset location.</br>
       Uncomment line 17 and comment line 20 of train.py for training VGG-19.</p>
         
    <h3>2. Image Style transfer using VGG-16 and VGG-19 models</h3>   
@@ -101,7 +101,7 @@ Rendering the semantic content of an image in different styles is a difficult im
       <p>python3 texture_trasform.py --texture <texture model file path> --style <style model file path> --input <input file path> --output <output filename with out extension></p>
    <h3>4. Video Style Transfer using VGG-16 model</h3>
       <p>python3 video_transform.py --input <path to input video> --style <style model path> --output <output filename without extension></p>
- </div>
+          </div>
 
 <div>
     <h2>Acknowledgement</h2>
